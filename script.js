@@ -1,4 +1,5 @@
-// 1)
+//Мінімум
+// 1)Напиши всі можливі варіанти створення функцій
     /*function name() {...};
     function name(a, b) {...}
     let name = function () {...};
@@ -6,14 +7,17 @@
     let name = (a, b) => a * b;
     let name = (a, b) => {...}*/
 
-// 2)
-    /*function argsNumber(a, b, c, z, x, v) {
+// 2) Створи функцію, яка буде виводити кількість переданих їй аргументів.
+    function argsNumber() {
         return arguments.length;
     }
-    console.log(argsNumber(3,2,4,5))*/
+    console.log(argsNumber(3,2,4,5))
 
-// 3)
-    /*function result(a, b) {
+// 3)Напиши функцію, яка приймає 2 числа і повертає :
+    //-1, якщо перше число менше, ніж друге; 
+    //1 - якщо перше число більше, ніж друге; 
+    //0 - якщо числа рівні.
+    function result(a, b) {
         if (arguments[0] < arguments[1]) {
             return -1;
         } else if (arguments[0] === arguments[1]) {
@@ -23,10 +27,10 @@
         }
     }
 
-    console.log(result(1,5))*/
+    console.log(result(1,5))
 
-// 4)
-    /*function factorial(number) { 
+// 4) Напиши функцію, яка обчислює факторіал переданого їй числа.
+    function factorial(number) { 
         let result = 1; 
         while(number){ 
             result *= number--; 
@@ -34,17 +38,19 @@
         return result; 
     }
     
-    console.log(factorial(10))*/
+    console.log(factorial(10))
 
-// 5)
-    /*function addNumbers(a, b, c) {
+// 5) Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. Наприклад: 
+    //цифри 1, 4, 9 перетворяться в число 149.
+    function addNumbers(a, b, c) {
          return String(a) + String(b) + String(c)
     }
 
-    console.log(addNumbers(5, 4, 3))*/ 
+    console.log(addNumbers(5, 4, 3)) 
 
-// 6)
-    /*let area = (width, height) => {
+// 6) Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу. Якщо в функцію передали 
+    // 1 параметр, то вона обчислює площу квадрата.
+    let area = (width, height) => {
         if (width != undefined && height != undefined ) {
             if (isNaN(width) == true && isNaN(height) == true) {
                 return 'Невірно задані ширина та висота!'
@@ -58,16 +64,18 @@
             if (isNaN(width) == true) {
                 return 'Невірно задана ширина!'
             }
-            return width * 4;
+            return width ** 2;
         } else {
             return 'Значення не задані'
         }
     }
 
-    console.log(area(5))*/
+    console.log(area(5, 10))
 
-// 7)
-    /*function reviewNum(number) {
+//Норма
+// 7) Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”. Досконале число - це число, 
+    //яке дорівнює сумі всіх своїх дільників.
+    function reviewNum(number) {
         let result = 0;
         for (let i = 1; i < number; i++) {
             if (number % i === 0) {
@@ -76,17 +84,19 @@
         }
 
         if (result === number) {
-            return 'Ідеальне число'
+            return 'Досконале число'
         } else {
-            return 'Не ідеальне число'
+            return 'Не досконале число'
         }
     
     }
 
-    console.log(reviewNum(6))*/
+    console.log(reviewNum(10))
+    console.log(reviewNum(6))
 
-// 8) 
-    /*function reviewDiapazon(start, end) {
+// 8) Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, і виводить тільки ті числа 
+    //з діапазону, які є досконалими. Використовуй написану раніше функцію, щоб дізнатися, чи є це число досконалим.
+    function reviewDiapazon(start, end) {
         for (let i = start; i < end; i++) {
 
             console.log(reviewNum(i))  
@@ -106,7 +116,7 @@
         }
     }
 
-    console.log(reviewDiapazon(1, 500))*/
+    console.log(reviewDiapazon(1, 500))
 
 
 
