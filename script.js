@@ -18,9 +18,9 @@
     //1 - якщо перше число більше, ніж друге; 
     //0 - якщо числа рівні.
     function result(a, b) {
-        if (arguments[0] < arguments[1]) {
+        if (a < b) {
             return -1;
-        } else if (arguments[0] === arguments[1]) {
+        } else if (a === b) {
             return 0;
         } else {
             return 1;
