@@ -97,23 +97,27 @@
 // 8) Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, і виводить тільки ті числа 
     //з діапазону, які є досконалими. Використовуй написану раніше функцію, щоб дізнатися, чи є це число досконалим.
     function reviewDiapazon(start, end) {
-        for (let i = start; i < end; i++) {
+        for (let i = start; i <= end; i++) {
 
-            console.log(reviewNum(i))  
-            
-            function reviewNum() {
-                let result = 0;
-                for (let j = 1; j < i; j++) {
-                    if (i % j === 0) {
-                        result += j;
-                    }
-                }
-    
-                if (result === i) {
-                    return i
-                }
+            let result = 0;
+            for (let j = 1; j < i; j++) {
+                if (i % j == 0) {
+                    result += j;  
+                } 
+                    
             }
+
+            if (result == i) {
+                console.log(reviewNum(i))
+            } else {
+                continue
+            }
+                
+            function reviewNum() {
+                return i
+            } 
         }
+        return 'Всі досконалі числа виведені вище'
     }
 
     console.log(reviewDiapazon(1, 500))
